@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css">
+     -->
+     <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    background-image: url("{% static 'img/dis.jpg'%}");
+    background-color: rgba(185, 221, 160, 0.725);
+    background-blend-mode: multiply;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+/* nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+}
+nav ul{
+    flex :1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .menu-img{
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;    
+}
+nav .logo{
+    width: 160px;
+    cursor: pointer;    
+}
+button{
+    background:#efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 6px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 0.5s;
+
+} */
+/* button span{
+    display: block;
+    background: #999;
+    height: 30px;
+    width: 26px;
+    border-radius: 6px;
+    margin-left: 2px;
+    transition: background 0.5s, margin-left 0.5s;
+
+} */
+.lamp-container{
+    position: absolute;
+    top: -20px;
+    left: 22%;
+    width: 200px;
+    /* background-color: #02cb4f; */
+}
+.lamp{
+    width: 100%;
+}
+.logo{
+    font-size: 3rem;
+
+}
+.light{
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translateX(-51%);
+  width: 750px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  
+}
+.form{
+
+    background-color:rgba(81, 43, 5, 0.725);
+    border-radius: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 120%;
+    left: 55%;
+    transform: translateX(-51%);
+    width: 280px;
+    padding: 50px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    
+    
+    
+}
+#name{
+    border-radius: 5px;
+    /* margin: 10px; */
+    /* align-items: center; */
+    text-align: center;
+    /* padding: 4px; */
+    width:100%;
+}
+#password{
+    border-radius: 5px;
+    /* margin: 10px; */
+    /* align-items: center; */
+    text-align: center;
+    /* padding: 4px; */
+    width:100%;
+}
+input{
+    margin: 5px;
+    padding: 3px;
+    
+}
+#login{
+    width: 50%;
+    margin: 5px;
+    border-radius: px;
+    margin-left:45px;
+
+    
+}
+#login a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.t{
+    max-width: 50%;
+    margin-top: 100px;
+    margin-left: 800px;
+}
+.t h1{
+    font-size: 100px;
+    font-weight: 400;
+}
+.t a{
+    text-decoration: none;
+    background: #00986f;
+    padding: 14px 40px;
+    display: inline-block;
+    margin: 5px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: all;
+    transition-duration: 0.4s;
+}
+.t a:hover{
+    text-decoration: none;
+    background: #02cb4f;
+    margin: 5px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    margin:150px ;
+    
+}
+.control .line{
+    width: 250px;
+    height: 4px;
+    margin-right: 25px;
+    background:#fff;
+
+}
+.control .line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: #00986f;
+    display: block;
+
+}
+
+.active{
+    background: #00986f;
+}
+.active span{
+    background: #fff;
+    /* margin-left: 31px; */
+}
+.on{
+    opacity: 1;
+}
+.visible{
+    /* background-color: #02cb4f; */
+    opacity: 1;
+    z-index: 0;
+}
+.form_transpirancy{
+    background-color: (0,0,0,rgba(81, 43, 5, 0.725));
+}
+
+.login{
+    position: absolute;
+z-index: 1;
+align-items: center;
+margin-top: 10px;
+}
+
+     </style>
+</head>
+
+<body>
+    <div class="hero" >
+<!--     
+        <nav>
+            <img src="{% static 'img/menu.png'%}" alt="" class="menu-img">
+            <h1 class="logo">tribune</h1>
+         
+            <ul>
+                <li><a href="">Latest</a> </li>
+                <li><a href="">Modern</a> </li>
+                <li><a href="room">Rooms</a> </li>
+                <li><a href="">Affordable</a></li>
+            </ul>
+            <button type="button" onclick="togglebtn()" id="btn"><span></span> </button>
+        </nav> -->
+        {% include 'navbar.html' %}
+
+
+        <div class="lamp-container">
+            <img src="{% static 'img/lamp.png'%}" alt="lamp" class="lamp">
+            <img src="{% static 'img/light.png'%}" alt="light" class="light" id="light">
+            <form action="input" class="form" id="form" >
+               
+                    <input type="text" name="name" id="name" placeholder="username">
+                    <input type="password" name="password" id="password" placeholder="password">    
+                    <button id="login"><a href="submit">Login</a></button>
+            </form>
+        </div>
+
+        <div class="t">
+            <h1>Discussion Forum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, <br> sapiente atque, perferendis est commodi
+                aliquid nisi fuga saepe voluptatem <br> cupiditate ut magni nihil minima, illum inventore placeat?
+                Doloremque, et vitae!</p>
+                <button type="button" onclick="togglebtn()" id="sgn" class="login"><span></span>Login</button>
+                <div class="control">
+                    <p>04</p>
+                    <div class="line"><span></span></div>
+                    <p>05</p>
+                </div>
+        </div>
+    </div>
+<script>
+    var sgn = document.getElementById("sgn");
+    var light = document.getElementById("light");
+    var form = document.getElementById("form");
+
+    function togglebtn(){
+        sgn.classList.toggle("active");
+        light.classList.toggle("on");
+        form.classList.toggle("visible");
+      
+    }
+</script>
+
+</body>
+
+</html>
